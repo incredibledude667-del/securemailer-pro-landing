@@ -163,7 +163,11 @@ contactLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     if (!config.contactEmail && !config.contactUrl) {
       event.preventDefault();
-      alert("Add your email or contact link in site.config.js before publishing.");
+      const message =
+        currentLang === "ru"
+          ? "Для покупки ответьте на сообщение, в котором вы получили ссылку на эту страницу."
+          : "To buy SecureMailer Pro, reply to the message where you received this page link.";
+      alert(message);
     }
   });
 });
