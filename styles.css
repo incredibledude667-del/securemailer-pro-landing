@@ -115,7 +115,7 @@ a {
 }
 
 .nav a,
-.lang-toggle {
+.lang-switch button {
   min-height: 44px;
   padding: 0 15px;
   border: 0;
@@ -133,7 +133,7 @@ a {
 }
 
 .nav a:hover,
-.lang-toggle:hover {
+.lang-switch button:hover {
   color: var(--blue);
   background: rgba(8, 125, 244, 0.08);
 }
@@ -149,6 +149,29 @@ a {
   color: #fff;
   background: var(--blue);
   transform: translateY(-1px);
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 6px;
+  padding: 3px;
+  border: 1px solid rgba(16, 31, 53, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.lang-switch button {
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: 12px;
+}
+
+.lang-switch button.is-active {
+  color: #fff;
+  background: var(--blue);
+  box-shadow: 0 10px 22px rgba(8, 125, 244, 0.22);
 }
 
 .hero {
@@ -471,56 +494,114 @@ h3 {
   padding-top: 70px;
 }
 
-.reports-visual {
+.report-board {
   position: relative;
-  min-height: 430px;
-  padding: 34px;
-  overflow: hidden;
-  border-radius: 36px;
-  background:
-    radial-gradient(circle at 80% 12%, rgba(110, 214, 255, 0.3), transparent 20rem),
-    linear-gradient(145deg, #08111f, #092f70 58%, #087df4);
-  box-shadow: var(--shadow-blue);
-}
-
-.report-bar {
-  height: 18px;
-  margin-bottom: 18px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.report-bar.success {
-  width: 78%;
-  background: linear-gradient(90deg, #34d399, #b8ffe2);
-}
-
-.report-bar.warning {
-  width: 48%;
-  background: linear-gradient(90deg, #f59e0b, #fde68a);
-}
-
-.report-bar.muted {
-  width: 62%;
-}
-
-.report-table {
-  position: absolute;
-  left: 34px;
-  right: 34px;
-  bottom: 34px;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr;
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.16);
+  gap: 18px;
+  min-height: 410px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  border-radius: 34px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.68)),
+    radial-gradient(circle at 82% 12%, rgba(8, 125, 244, 0.18), transparent 20rem);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(18px);
 }
 
-.report-table span {
-  min-height: 54px;
-  background: rgba(255, 255, 255, 0.11);
+.report-board-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 760;
+}
+
+.report-board-head span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow:
+    22px 0 0 #ef4444,
+    44px 0 0 #f59e0b;
+}
+
+.report-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.report-metrics div,
+.report-rows div {
+  border: 1px solid rgba(20, 31, 48, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.report-metrics div {
+  padding: 18px;
+}
+
+.report-metrics b {
+  display: block;
+  color: var(--ink);
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.report-metrics span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.report-rows {
+  display: grid;
+  gap: 10px;
+  align-content: end;
+}
+
+.report-rows div {
+  display: grid;
+  grid-template-columns: 12px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  min-height: 58px;
+  padding: 0 16px;
+}
+
+.report-rows span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.report-rows div:first-child span {
+  background: #16a34a;
+}
+
+.report-rows div:last-child span {
+  background: #dc2626;
+}
+
+.report-rows strong {
+  overflow: hidden;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.report-rows em {
+  color: var(--muted);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 760;
 }
 
 .price {
@@ -697,10 +778,14 @@ h3 {
   }
 
   .nav .nav-cta,
-  .lang-toggle {
+  .lang-switch button {
     min-height: 42px;
     padding: 0 12px;
     font-size: 14px;
+  }
+
+  .lang-switch {
+    margin-left: 2px;
   }
 
   .hero {
@@ -749,15 +834,9 @@ h3 {
     min-height: auto;
   }
 
-  .reports-visual {
+  .report-board {
     min-height: 330px;
     padding: 24px;
-  }
-
-  .report-table {
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
   }
 
   .final-cta {

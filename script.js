@@ -102,7 +102,7 @@ const translations = {
 };
 
 const config = window.SECUREMAILER_SITE || {};
-const langButton = document.querySelector("[data-lang-toggle]");
+const langButtons = document.querySelectorAll("[data-lang-select]");
 const priceNodes = document.querySelectorAll("[data-price]");
 const contactLinks = document.querySelectorAll("[data-contact]");
 let currentLang = localStorage.getItem("securemailer_lang") || "ru";
@@ -112,9 +112,11 @@ function applyLanguage(lang) {
   document.documentElement.lang = lang;
   localStorage.setItem("securemailer_lang", lang);
 
-  if (langButton) {
-    langButton.textContent = lang === "ru" ? "EN" : "RU";
-  }
+  langButtons.forEach((button) => {
+    const isActive = button.dataset.langSelect === lang;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
@@ -149,11 +151,11 @@ function applyConfig() {
   });
 }
 
-if (langButton) {
-  langButton.addEventListener("click", () => {
-    applyLanguage(currentLang === "ru" ? "en" : "ru");
+langButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    applyLanguage(button.dataset.langSelect);
   });
-}
+});
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -174,3 +176,8 @@ document.querySelectorAll("[data-reveal]").forEach((node, index) => {
 
 applyLanguage(currentLang);
 applyConfig();
+
+if ("scrollRestoration" in window.history && !window.location.hash) {
+  window.history.scrollRestoration = "manual";
+  window.scrollTo({ top: 0, left: 0 });
+}

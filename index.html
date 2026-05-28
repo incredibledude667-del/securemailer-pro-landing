@@ -25,7 +25,10 @@
         <a href="#reports" data-i18n="navReports">Отчеты</a>
         <a href="#price" data-i18n="navPrice">Цена</a>
         <a class="nav-cta" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="navBuy">Купить</a>
-        <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
+        <div class="lang-switch" aria-label="Выбор языка">
+          <button type="button" data-lang-select="ru">RU</button>
+          <button type="button" data-lang-select="en">EN</button>
+        </div>
       </nav>
     </header>
 
@@ -112,14 +115,20 @@
       </section>
 
       <section class="section reports" id="reports">
-        <div class="reports-visual" data-reveal aria-hidden="true">
-          <div class="report-bar success"></div>
-          <div class="report-bar warning"></div>
-          <div class="report-bar muted"></div>
-          <div class="report-table">
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
-            <span></span><span></span><span></span>
+        <div class="report-board" data-reveal aria-hidden="true">
+          <div class="report-board-head">
+            <span></span>
+            <strong>Campaign report</strong>
+          </div>
+          <div class="report-metrics">
+            <div><b>1 240</b><span>sent</span></div>
+            <div><b>37</b><span>errors</span></div>
+            <div><b>18</b><span>bounce</span></div>
+          </div>
+          <div class="report-rows">
+            <div><span></span><strong>client@company.com</strong><em>sent</em></div>
+            <div><span></span><strong>sales@market.io</strong><em>queued</em></div>
+            <div><span></span><strong>info@domain.net</strong><em>bounce</em></div>
           </div>
         </div>
         <div class="section-copy" data-reveal>
