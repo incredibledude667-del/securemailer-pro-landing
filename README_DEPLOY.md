@@ -7,13 +7,14 @@ Static landing page: no build, no backend, no npm.
 Open `site.config.js` and set one of these:
 
 ```js
-contactEmail: "your@email.com"
+contactUrl: "https://t.me/teambaxyz",
+developerUrl: "https://t.me/pireaumonde1"
 ```
 
-or:
+Optional fallback:
 
 ```js
-contactUrl: "https://t.me/your_username"
+contactEmail: "your@email.com"
 ```
 
 ## Local preview
@@ -33,4 +34,3 @@ http://localhost:8080
 Recommended: GitHub Pages.
 
 Other free static hosting options: Cloudflare Pages, Netlify, Vercel.
-

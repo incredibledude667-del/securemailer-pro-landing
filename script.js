@@ -3,11 +3,12 @@ const translations = {
     navPrivacy: "Privacy",
     navWorkflow: "Workflow",
     navPrice: "Price",
+    navBuy: "Buy",
     heroEyebrow: "Local desktop software for B2B outreach",
     heroTitle: "Send business proposals without exposing your contact list.",
     heroText:
       "SecureMailer Pro sends one individual email per recipient through your own SMTP/IMAP accounts. No cloud upload. No CC/BCC exposure. Clear reports after every campaign.",
-    ctaPrimary: "Get SecureMailer Pro",
+    ctaPrimary: "Buy / discuss",
     ctaSecondary: "See how it works",
     trustLocal: "Local database",
     trustOne: "One recipient per email",
@@ -52,18 +53,20 @@ const translations = {
     contactTitle: "Get the app and start with your first campaign.",
     contactText:
       "You receive the Windows build, a short PDF guide, and a workflow for safely sending individual emails through your own accounts.",
-    contactButton: "Contact seller",
+    contactButton: "Buy / discuss",
+    developerButton: "Contact developer",
     footerNote: "Private. Local. Professional.",
   },
   ru: {
     navPrivacy: "Приватность",
     navWorkflow: "Как работает",
     navPrice: "Цена",
+    navBuy: "Купить",
     heroEyebrow: "Локальная программа для B2B-рассылки",
     heroTitle: "Отправляйте КП без раскрытия вашей базы.",
     heroText:
       "SecureMailer Pro отправляет каждому получателю отдельное письмо через ваши SMTP/IMAP-аккаунты. Без загрузки базы в облако. Без CC/BCC. С понятным отчетом после каждой кампании.",
-    ctaPrimary: "Получить SecureMailer Pro",
+    ctaPrimary: "Купить / обсудить",
     ctaSecondary: "Как это работает",
     trustLocal: "База хранится локально",
     trustOne: "Один получатель в письме",
@@ -108,7 +111,8 @@ const translations = {
     contactTitle: "Получите программу и запустите первую кампанию.",
     contactText:
       "Вы получаете Windows-сборку, короткий PDF-гайд и рабочий процесс для безопасной индивидуальной отправки через свои аккаунты.",
-    contactButton: "Связаться с продавцом",
+    contactButton: "Купить / обсудить",
+    developerButton: "Написать разработчику",
     footerNote: "Private. Local. Professional.",
   },
 };
@@ -116,7 +120,7 @@ const translations = {
 const config = window.SECUREMAILER_SITE || {};
 const langButton = document.querySelector("[data-lang-toggle]");
 const priceNodes = document.querySelectorAll("[data-price]");
-const contactLinks = document.querySelectorAll("[data-contact-link], [data-contact-cta]");
+const contactLinks = document.querySelectorAll("[data-contact]");
 let currentLang = localStorage.getItem("securemailer_lang") || "en";
 
 function applyLanguage(lang) {
@@ -137,14 +141,20 @@ function applyConfig() {
     node.textContent = price;
   });
 
+  const buyUrl = config.contactUrl || "";
+  const developerUrl = config.developerUrl || buyUrl;
+
   contactLinks.forEach((link) => {
-    if (config.contactUrl) {
-      link.href = config.contactUrl;
+    const contactType = link.dataset.contact;
+    const targetUrl = contactType === "developer" ? developerUrl : buyUrl;
+
+    if (targetUrl) {
+      link.href = targetUrl;
       link.removeAttribute("data-missing-contact");
       return;
     }
 
-    if (config.contactEmail) {
+    if (config.contactEmail && contactType !== "developer") {
       link.href = `mailto:${config.contactEmail}?subject=SecureMailer%20Pro`;
       link.removeAttribute("data-missing-contact");
       return;

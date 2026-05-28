@@ -2,6 +2,6 @@ window.SECUREMAILER_SITE = {
   productName: "SecureMailer Pro",
   price: "$150",
   contactEmail: "",
-  contactUrl: "",
+  contactUrl: "https://t.me/teambaxyz",
+  developerUrl: "https://t.me/pireaumonde1",
 };
-
