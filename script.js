@@ -1,118 +1,102 @@
 const translations = {
-  en: {
-    navPrivacy: "Privacy",
-    navWorkflow: "Workflow",
-    navPrice: "Price",
-    navBuy: "Buy",
-    heroEyebrow: "Local desktop software for B2B outreach",
-    heroTitle: "Send business proposals without exposing your contact list.",
-    heroText:
-      "SecureMailer Pro sends one individual email per recipient through your own SMTP/IMAP accounts. No cloud upload. No CC/BCC exposure. Clear reports after every campaign.",
-    ctaPrimary: "Buy / discuss",
-    ctaSecondary: "See how it works",
-    trustLocal: "Local database",
-    trustOne: "One recipient per email",
-    trustReports: "Excel reports",
-    proofTo: "Every email has exactly one recipient.",
-    proofPrice: "One-time license, no monthly SaaS fee.",
-    proofProtocol: "Works through your own mailboxes.",
-    privacyEyebrow: "Built around database protection",
-    privacyTitle: "Your list stays on your computer.",
-    privacyText:
-      "SecureMailer is not a cloud email platform. Contacts, reports and project files remain local. Passwords are stored in the system keychain, and emails are sent through the mail accounts you control.",
-    securityOne: "No cloud database upload",
-    securityTwo: "No shared recipient list",
-    securityThree: "Bounce checks through IMAP",
-    securityFour: "Clean list after campaign",
-    workflowEyebrow: "Simple campaign flow",
-    workflowTitle: "From list to report in five steps.",
-    stepOneTitle: "Prepare",
-    stepOneText: "Import the message, contact base and attachments.",
-    stepTwoTitle: "Connect",
-    stepTwoText: "Add SMTP/IMAP accounts and provider limits.",
-    stepThreeTitle: "Check",
-    stepThreeText: "Find duplicates, invalid emails, bad domains and stop-list matches.",
-    stepFourTitle: "Test",
-    stepFourText: "Send a test email to yourself before the real campaign.",
-    stepFiveTitle: "Launch",
-    stepFiveText: "Monitor statuses, pauses, bounces and final reports.",
-    compareEyebrow: "Why not just use a SaaS?",
-    compareTitle: "Different tool for a different job.",
-    manualTitle: "Manual email",
-    manualText: "Slow, easy to make mistakes, no proper reporting.",
-    saasTitle: "Email SaaS",
-    saasText: "Usually requires cloud uploads and monthly subscription.",
-    secureText: "Local, individual, controlled outreach through your own mailboxes.",
-    priceEyebrow: "One clear price",
-    priceTitle: "No subscription. One local copy.",
-    priceText:
-      "Best fit for sales teams and small B2B companies that need controlled outreach without uploading their database to a third-party platform.",
-    licenseLabel: "SecureMailer Pro license",
-    licenseText: "Windows build, PDF guide, local reports and project files.",
-    contactEyebrow: "Ready to use",
-    contactTitle: "Get the app and start with your first campaign.",
-    contactText:
-      "You receive the Windows build, a short PDF guide, and a workflow for safely sending individual emails through your own accounts.",
-    contactButton: "Buy / discuss",
-    developerButton: "Contact developer",
-    footerNote: "Private. Local. Professional.",
-  },
   ru: {
     navPrivacy: "Приватность",
-    navWorkflow: "Как работает",
+    navWorkflow: "Процесс",
+    navReports: "Отчеты",
     navPrice: "Цена",
     navBuy: "Купить",
     heroEyebrow: "Локальная программа для B2B-рассылки",
-    heroTitle: "Отправляйте КП без раскрытия вашей базы.",
+    heroTitle: "Рассылка без раскрытия базы.",
     heroText:
-      "SecureMailer Pro отправляет каждому получателю отдельное письмо через ваши SMTP/IMAP-аккаунты. Без загрузки базы в облако. Без CC/BCC. С понятным отчетом после каждой кампании.",
+      "SecureMailer Pro отправляет каждому получателю отдельное письмо через ваши SMTP/IMAP-аккаунты. База остается на компьютере, без CC/BCC и без загрузки контактов в облако.",
     ctaPrimary: "Купить / обсудить",
-    ctaSecondary: "Как это работает",
-    trustLocal: "База хранится локально",
-    trustOne: "Один получатель в письме",
-    trustReports: "Excel-отчеты",
-    proofTo: "В каждом письме ровно один получатель.",
-    proofPrice: "Разовая лицензия, без ежемесячной подписки.",
-    proofProtocol: "Работает через ваши почтовые ящики.",
-    privacyEyebrow: "Сделано вокруг защиты базы",
-    privacyTitle: "Ваша база остается на вашем компьютере.",
+    ctaSecondary: "Как работает",
+    signalOne: "В поле To всегда один адрес",
+    signalTwo: "Отправка через ваши ящики",
+    signalThree: "Отчет и чистая база после кампании",
+    privacyEyebrow: "Главная идея",
+    privacyTitle: "Контакты остаются у вас.",
     privacyText:
-      "SecureMailer — не облачный сервис рассылок. Контакты, отчеты и файлы проекта остаются локально. Пароли хранятся в системном хранилище, письма уходят через почтовые аккаунты, которыми вы управляете.",
-    securityOne: "Без загрузки базы в облако",
-    securityTwo: "Без раскрытия списка получателей",
-    securityThree: "Проверка возвратов через IMAP",
-    securityFour: "Чистая база после кампании",
-    workflowEyebrow: "Простой процесс",
-    workflowTitle: "От базы до отчета за пять шагов.",
-    stepOneTitle: "Подготовка",
-    stepOneText: "Загрузите текст письма, базу получателей и вложения.",
-    stepTwoTitle: "Аккаунты",
-    stepTwoText: "Добавьте SMTP/IMAP-ящики и лимиты провайдера.",
-    stepThreeTitle: "Проверка",
-    stepThreeText: "Найдите дубли, ошибки email, плохие домены и стоп-лист.",
-    stepFourTitle: "Тест",
-    stepFourText: "Отправьте тестовое письмо себе до реального запуска.",
-    stepFiveTitle: "Запуск",
-    stepFiveText: "Следите за статусами, паузами, возвратами и отчетами.",
-    compareEyebrow: "Почему не обычный SaaS?",
-    compareTitle: "Другой инструмент под другую задачу.",
-    manualTitle: "Ручная отправка",
-    manualText: "Медленно, легко ошибиться, сложно собрать отчет.",
-    saasTitle: "Сервис рассылок",
-    saasText: "Чаще требует загрузить базу в облако и платить подписку.",
-    secureText: "Локальная индивидуальная отправка через ваши почтовые ящики.",
-    priceEyebrow: "Одна понятная цена",
-    priceTitle: "Без подписки. Одна локальная копия.",
+      "Это не SaaS и не браузерная автоматизация. Программа работает локально как почтовый клиент: берет вашу базу, отправляет письма через ваши аккаунты и сохраняет отчеты на вашем компьютере.",
+    privacyPointOne: "Без загрузки базы на сервер",
+    privacyPointTwo: "Без групповых писем, CC и BCC",
+    privacyPointThree: "Пароли хранятся в системном keychain",
+    workflowEyebrow: "Рабочий процесс",
+    workflowTitle: "От базы до отчета без ручной рутины.",
+    stepOneTitle: "Подготовьте письмо",
+    stepOneText: "Напишите текст вручную или импортируйте DOCX, TXT или HTML. Добавьте вложения отдельно.",
+    stepTwoTitle: "Загрузите базу",
+    stepTwoText: "XLSX, CSV, TXT и DOCX объединяются в единую базу с персонализацией по полям.",
+    stepThreeTitle: "Проверьте качество",
+    stepThreeText: "Дубли, неверные email, домены без MX, стоп-лист и подозрительные адреса видны до запуска.",
+    stepFourTitle: "Запустите кампанию",
+    stepFourText: "Программа учитывает лимиты аккаунтов, делает паузы и продолжает после cooldown.",
+    reportsEyebrow: "Контроль результата",
+    reportsTitle: "Понятно, кому ушло, а где ошибка.",
+    reportsText:
+      "После кампании остаются статусы получателей, причины ошибок, проверка возвратов через IMAP и отдельная чистая база для следующей отправки.",
+    priceEyebrow: "Одна цена",
+    priceTitle: "Разовая покупка без подписки.",
     priceText:
-      "Подходит отделам продаж и малому B2B-бизнесу, которым нужна контролируемая отправка без загрузки клиентской базы в сторонний сервис.",
-    licenseLabel: "Лицензия SecureMailer Pro",
-    licenseText: "Windows-сборка, PDF-гайд, локальные отчеты и файлы проекта.",
-    contactEyebrow: "Готово к работе",
-    contactTitle: "Получите программу и запустите первую кампанию.",
-    contactText:
-      "Вы получаете Windows-сборку, короткий PDF-гайд и рабочий процесс для безопасной индивидуальной отправки через свои аккаунты.",
+      "Подходит отделам продаж, B2B-компаниям и владельцам клиентских баз, которым нужна контролируемая рассылка без облачных платформ.",
+    licenseLabel: "SecureMailer Pro",
+    licenseText: "Локальная лицензия продукта. Детали покупки и передачи обсуждаются в Telegram.",
+    priceButton: "Купить / обсудить",
+    contactEyebrow: "SecureMailer Pro",
+    contactTitle: "Начните с первой безопасной кампании.",
+    contactText: "Напишите в Telegram, чтобы обсудить покупку, установку и сценарий первой рассылки.",
     contactButton: "Купить / обсудить",
-    developerButton: "Написать разработчику",
+    developerButton: "Разработчик",
+    footerNote: "Private. Local. Professional.",
+  },
+  en: {
+    navPrivacy: "Privacy",
+    navWorkflow: "Workflow",
+    navReports: "Reports",
+    navPrice: "Price",
+    navBuy: "Buy",
+    heroEyebrow: "Local desktop software for B2B outreach",
+    heroTitle: "Private outreach. No exposed lists.",
+    heroText:
+      "SecureMailer Pro sends one individual email per recipient through your own SMTP/IMAP accounts. Your database stays on your computer, with no CC/BCC and no cloud contact upload.",
+    ctaPrimary: "Buy / discuss",
+    ctaSecondary: "See workflow",
+    signalOne: "Exactly one address in To",
+    signalTwo: "Sent from your mailboxes",
+    signalThree: "Report and clean list after each campaign",
+    privacyEyebrow: "Core principle",
+    privacyTitle: "Contacts stay with you.",
+    privacyText:
+      "This is not a SaaS platform and not browser automation. The app works locally like an email client: it reads your list, sends through your accounts, and saves reports on your computer.",
+    privacyPointOne: "No database upload to a server",
+    privacyPointTwo: "No group emails, CC or BCC",
+    privacyPointThree: "Passwords stay in the system keychain",
+    workflowEyebrow: "Campaign workflow",
+    workflowTitle: "From list to report without manual routine.",
+    stepOneTitle: "Prepare the message",
+    stepOneText: "Write manually or import DOCX, TXT or HTML. Add attachments separately.",
+    stepTwoTitle: "Load the list",
+    stepTwoText: "XLSX, CSV, TXT and DOCX are merged into one personalized recipient base.",
+    stepThreeTitle: "Check quality",
+    stepThreeText: "Duplicates, invalid emails, domains without MX, stop-list matches and suspicious addresses are visible before launch.",
+    stepFourTitle: "Launch campaign",
+    stepFourText: "The app follows account limits, waits between messages, and resumes after cooldown.",
+    reportsEyebrow: "Result control",
+    reportsTitle: "Know who received it and where it failed.",
+    reportsText:
+      "Each campaign leaves recipient statuses, error reasons, bounce checks through IMAP and a separate clean list for the next send.",
+    priceEyebrow: "One price",
+    priceTitle: "One-time purchase. No subscription.",
+    priceText:
+      "Built for sales teams, B2B companies and database owners who need controlled outreach without cloud platforms.",
+    licenseLabel: "SecureMailer Pro",
+    licenseText: "Local product license. Purchase and delivery details are discussed in Telegram.",
+    priceButton: "Buy / discuss",
+    contactEyebrow: "SecureMailer Pro",
+    contactTitle: "Start your first safe campaign.",
+    contactText: "Message us on Telegram to discuss purchase, setup and your first outreach workflow.",
+    contactButton: "Buy / discuss",
+    developerButton: "Developer",
     footerNote: "Private. Local. Professional.",
   },
 };
@@ -121,17 +105,20 @@ const config = window.SECUREMAILER_SITE || {};
 const langButton = document.querySelector("[data-lang-toggle]");
 const priceNodes = document.querySelectorAll("[data-price]");
 const contactLinks = document.querySelectorAll("[data-contact]");
-let currentLang = localStorage.getItem("securemailer_lang") || "en";
+let currentLang = localStorage.getItem("securemailer_lang") || "ru";
 
 function applyLanguage(lang) {
   currentLang = lang;
   document.documentElement.lang = lang;
   localStorage.setItem("securemailer_lang", lang);
-  langButton.textContent = lang === "en" ? "RU" : "EN";
+
+  if (langButton) {
+    langButton.textContent = lang === "ru" ? "EN" : "RU";
+  }
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
-    node.textContent = translations[lang][key] || translations.en[key] || node.textContent;
+    node.textContent = translations[lang][key] || translations.ru[key] || node.textContent;
   });
 }
 
@@ -150,37 +137,23 @@ function applyConfig() {
 
     if (targetUrl) {
       link.href = targetUrl;
-      link.removeAttribute("data-missing-contact");
       return;
     }
 
     if (config.contactEmail && contactType !== "developer") {
       link.href = `mailto:${config.contactEmail}?subject=SecureMailer%20Pro`;
-      link.removeAttribute("data-missing-contact");
       return;
     }
 
-    link.href = "mailto:YOUR_EMAIL_HERE?subject=SecureMailer%20Pro";
-    link.dataset.missingContact = "true";
+    link.href = "#contact";
   });
 }
 
-langButton.addEventListener("click", () => {
-  applyLanguage(currentLang === "en" ? "ru" : "en");
-});
-
-contactLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    if (!config.contactEmail && !config.contactUrl) {
-      event.preventDefault();
-      const message =
-        currentLang === "ru"
-          ? "Для покупки ответьте на сообщение, в котором вы получили ссылку на эту страницу."
-          : "To buy SecureMailer Pro, reply to the message where you received this page link.";
-      alert(message);
-    }
+if (langButton) {
+  langButton.addEventListener("click", () => {
+    applyLanguage(currentLang === "ru" ? "en" : "ru");
   });
-});
+}
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -191,11 +164,11 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.16 },
+  { threshold: 0.14 },
 );
 
 document.querySelectorAll("[data-reveal]").forEach((node, index) => {
-  node.style.transitionDelay = `${Math.min(index * 45, 260)}ms`;
+  node.style.transitionDelay = `${Math.min(index * 35, 210)}ms`;
   observer.observe(node);
 });
 

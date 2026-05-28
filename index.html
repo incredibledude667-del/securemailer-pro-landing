@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="SecureMailer Pro is a local desktop app for safe individual email outreach through your own SMTP/IMAP accounts."
+      content="SecureMailer Pro — локальная программа для индивидуальной B2B-рассылки через ваши SMTP/IMAP-аккаунты без раскрытия базы."
     />
-    <title>SecureMailer Pro — Private email outreach</title>
+    <title>SecureMailer Pro — локальная B2B-рассылка</title>
     <link rel="icon" href="assets/securemailer-icon.png" />
     <link rel="preload" href="assets/securemailer-logo.png" as="image" />
     <link rel="stylesheet" href="styles.css" />
@@ -19,159 +19,143 @@
         <span>SecureMailer <strong>Pro</strong></span>
       </a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#privacy" data-i18n="navPrivacy">Privacy</a>
-        <a href="#workflow" data-i18n="navWorkflow">Workflow</a>
-        <a href="#price" data-i18n="navPrice">Price</a>
-        <a class="nav-cta" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="navBuy">Buy</a>
-        <button class="lang-toggle" type="button" data-lang-toggle>RU</button>
+      <nav class="nav" aria-label="Главная навигация">
+        <a href="#privacy" data-i18n="navPrivacy">Приватность</a>
+        <a href="#workflow" data-i18n="navWorkflow">Процесс</a>
+        <a href="#reports" data-i18n="navReports">Отчеты</a>
+        <a href="#price" data-i18n="navPrice">Цена</a>
+        <a class="nav-cta" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="navBuy">Купить</a>
+        <button class="lang-toggle" type="button" data-lang-toggle>EN</button>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-visual" aria-hidden="true">
-          <div class="orb orb-a"></div>
-          <div class="orb orb-b"></div>
-          <div class="mail-plane">
-            <img src="assets/securemailer-logo.png" alt="" />
-            <div class="mail-line line-a"></div>
-            <div class="mail-line line-b"></div>
-            <div class="mail-line line-c"></div>
-          </div>
-        </div>
-
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-copy" data-reveal>
-          <p class="eyebrow" data-i18n="heroEyebrow">Local desktop software for B2B outreach</p>
-          <h1 id="hero-title" data-i18n="heroTitle">
-            Send business proposals without exposing your contact list.
-          </h1>
+          <p class="eyebrow" data-i18n="heroEyebrow">Локальная программа для B2B-рассылки</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Рассылка без раскрытия базы.</h1>
           <p class="hero-text" data-i18n="heroText">
-            SecureMailer Pro sends one individual email per recipient through your own SMTP/IMAP accounts. No cloud upload. No CC/BCC exposure. Clear reports after every campaign.
+            SecureMailer Pro отправляет каждому получателю отдельное письмо через ваши SMTP/IMAP-аккаунты. База остается на компьютере, без CC/BCC и без загрузки контактов в облако.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="ctaPrimary">Get SecureMailer Pro</a>
-            <a class="btn btn-secondary" href="#workflow" data-i18n="ctaSecondary">See how it works</a>
+            <a class="btn btn-primary" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="ctaPrimary">Купить / обсудить</a>
+            <a class="btn btn-secondary" href="#workflow" data-i18n="ctaSecondary">Как работает</a>
           </div>
-          <div class="trust-row" aria-label="Product highlights">
-            <span data-i18n="trustLocal">Local database</span>
-            <span data-i18n="trustOne">One recipient per email</span>
-            <span data-i18n="trustReports">Excel reports</span>
-          </div>
+          <ul class="signal-list" aria-label="Ключевые особенности">
+            <li data-i18n="signalOne">В поле To всегда один адрес</li>
+            <li data-i18n="signalTwo">Отправка через ваши ящики</li>
+            <li data-i18n="signalThree">Отчет и чистая база после кампании</li>
+          </ul>
+        </div>
+
+        <div class="hero-device" data-reveal aria-hidden="true">
+          <div class="device-halo"></div>
+          <img src="assets/securemailer-logo.png" alt="" />
+          <span class="mail-ray ray-one"></span>
+          <span class="mail-ray ray-two"></span>
+          <span class="mail-ray ray-three"></span>
         </div>
       </section>
 
-      <section class="proof-strip" data-reveal aria-label="Key numbers">
-        <div>
-          <strong>To: 1</strong>
-          <span data-i18n="proofTo">Every email has exactly one recipient.</span>
-        </div>
-        <div>
-          <strong data-price>$150</strong>
-          <span data-i18n="proofPrice">One-time license, no monthly SaaS fee.</span>
-        </div>
-        <div>
-          <strong>SMTP/IMAP</strong>
-          <span data-i18n="proofProtocol">Works through your own mailboxes.</span>
-        </div>
-      </section>
-
-      <section class="section split" id="privacy">
+      <section class="section privacy" id="privacy">
         <div class="section-copy" data-reveal>
-          <p class="eyebrow" data-i18n="privacyEyebrow">Built around database protection</p>
-          <h2 data-i18n="privacyTitle">Your list stays on your computer.</h2>
+          <p class="eyebrow" data-i18n="privacyEyebrow">Главная идея</p>
+          <h2 data-i18n="privacyTitle">Контакты остаются у вас.</h2>
           <p data-i18n="privacyText">
-            SecureMailer is not a cloud email platform. Contacts, reports and project files remain local. Passwords are stored in the system keychain, and emails are sent through the mail accounts you control.
+            Это не SaaS и не браузерная автоматизация. Программа работает локально как почтовый клиент: берет вашу базу, отправляет письма через ваши аккаунты и сохраняет отчеты на вашем компьютере.
           </p>
         </div>
-        <div class="security-stack" data-reveal>
-          <div><span>01</span><strong data-i18n="securityOne">No cloud database upload</strong></div>
-          <div><span>02</span><strong data-i18n="securityTwo">No shared recipient list</strong></div>
-          <div><span>03</span><strong data-i18n="securityThree">Bounce checks through IMAP</strong></div>
-          <div><span>04</span><strong data-i18n="securityFour">Clean list after campaign</strong></div>
+        <div class="privacy-points" data-reveal>
+          <div>
+            <span>01</span>
+            <strong data-i18n="privacyPointOne">Без загрузки базы на сервер</strong>
+          </div>
+          <div>
+            <span>02</span>
+            <strong data-i18n="privacyPointTwo">Без групповых писем, CC и BCC</strong>
+          </div>
+          <div>
+            <span>03</span>
+            <strong data-i18n="privacyPointThree">Пароли хранятся в системном keychain</strong>
+          </div>
         </div>
       </section>
 
       <section class="section workflow" id="workflow">
         <div class="section-head" data-reveal>
-          <p class="eyebrow" data-i18n="workflowEyebrow">Simple campaign flow</p>
-          <h2 data-i18n="workflowTitle">From list to report in five steps.</h2>
+          <p class="eyebrow" data-i18n="workflowEyebrow">Рабочий процесс</p>
+          <h2 data-i18n="workflowTitle">От базы до отчета без ручной рутины.</h2>
         </div>
-        <div class="steps">
+        <div class="flow">
           <article data-reveal>
             <span>1</span>
-            <h3 data-i18n="stepOneTitle">Prepare</h3>
-            <p data-i18n="stepOneText">Import the message, contact base and attachments.</p>
+            <h3 data-i18n="stepOneTitle">Подготовьте письмо</h3>
+            <p data-i18n="stepOneText">Напишите текст вручную или импортируйте DOCX, TXT или HTML. Добавьте вложения отдельно.</p>
           </article>
           <article data-reveal>
             <span>2</span>
-            <h3 data-i18n="stepTwoTitle">Connect</h3>
-            <p data-i18n="stepTwoText">Add SMTP/IMAP accounts and provider limits.</p>
+            <h3 data-i18n="stepTwoTitle">Загрузите базу</h3>
+            <p data-i18n="stepTwoText">XLSX, CSV, TXT и DOCX объединяются в единую базу с персонализацией по полям.</p>
           </article>
           <article data-reveal>
             <span>3</span>
-            <h3 data-i18n="stepThreeTitle">Check</h3>
-            <p data-i18n="stepThreeText">Find duplicates, invalid emails, bad domains and stop-list matches.</p>
+            <h3 data-i18n="stepThreeTitle">Проверьте качество</h3>
+            <p data-i18n="stepThreeText">Дубли, неверные email, домены без MX, стоп-лист и подозрительные адреса видны до запуска.</p>
           </article>
           <article data-reveal>
             <span>4</span>
-            <h3 data-i18n="stepFourTitle">Test</h3>
-            <p data-i18n="stepFourText">Send a test email to yourself before the real campaign.</p>
-          </article>
-          <article data-reveal>
-            <span>5</span>
-            <h3 data-i18n="stepFiveTitle">Launch</h3>
-            <p data-i18n="stepFiveText">Monitor statuses, pauses, bounces and final reports.</p>
+            <h3 data-i18n="stepFourTitle">Запустите кампанию</h3>
+            <p data-i18n="stepFourText">Программа учитывает лимиты аккаунтов, делает паузы и продолжает после cooldown.</p>
           </article>
         </div>
       </section>
 
-      <section class="section comparison">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow" data-i18n="compareEyebrow">Why not just use a SaaS?</p>
-          <h2 data-i18n="compareTitle">Different tool for a different job.</h2>
+      <section class="section reports" id="reports">
+        <div class="reports-visual" data-reveal aria-hidden="true">
+          <div class="report-bar success"></div>
+          <div class="report-bar warning"></div>
+          <div class="report-bar muted"></div>
+          <div class="report-table">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
         </div>
-        <div class="compare-grid">
-          <div data-reveal>
-            <h3 data-i18n="manualTitle">Manual email</h3>
-            <p data-i18n="manualText">Slow, easy to make mistakes, no proper reporting.</p>
-          </div>
-          <div data-reveal>
-            <h3 data-i18n="saasTitle">Email SaaS</h3>
-            <p data-i18n="saasText">Usually requires cloud uploads and monthly subscription.</p>
-          </div>
-          <div class="highlight" data-reveal>
-            <h3>SecureMailer Pro</h3>
-            <p data-i18n="secureText">Local, individual, controlled outreach through your own mailboxes.</p>
-          </div>
+        <div class="section-copy" data-reveal>
+          <p class="eyebrow" data-i18n="reportsEyebrow">Контроль результата</p>
+          <h2 data-i18n="reportsTitle">Понятно, кому ушло, а где ошибка.</h2>
+          <p data-i18n="reportsText">
+            После кампании остаются статусы получателей, причины ошибок, проверка возвратов через IMAP и отдельная чистая база для следующей отправки.
+          </p>
         </div>
       </section>
 
       <section class="section price" id="price">
         <div class="price-copy" data-reveal>
-          <p class="eyebrow" data-i18n="priceEyebrow">One clear price</p>
-          <h2 data-i18n="priceTitle">No subscription. One local copy.</h2>
-          <p data-i18n="priceText">Best fit for sales teams and small B2B companies that need controlled outreach without uploading their database to a third-party platform.</p>
+          <p class="eyebrow" data-i18n="priceEyebrow">Одна цена</p>
+          <h2 data-i18n="priceTitle">Разовая покупка без подписки.</h2>
+          <p data-i18n="priceText">
+            Подходит отделам продаж, B2B-компаниям и владельцам клиентских баз, которым нужна контролируемая рассылка без облачных платформ.
+          </p>
         </div>
-        <div class="price-card" data-reveal>
-          <span data-i18n="licenseLabel">SecureMailer Pro license</span>
+        <div class="price-box" data-reveal>
+          <span data-i18n="licenseLabel">SecureMailer Pro</span>
           <strong data-price>$150</strong>
-          <p data-i18n="licenseText">Windows build, PDF guide, local reports and project files.</p>
-          <a class="btn btn-primary" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="ctaPrimary">Get SecureMailer Pro</a>
+          <p data-i18n="licenseText">Локальная лицензия продукта. Детали покупки и передачи обсуждаются в Telegram.</p>
+          <a class="btn btn-primary" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="priceButton">Купить / обсудить</a>
         </div>
       </section>
 
-      <section class="section contact" id="contact">
+      <section class="final-cta" id="contact">
         <div data-reveal>
-          <p class="eyebrow" data-i18n="contactEyebrow">Ready to use</p>
-          <h2 data-i18n="contactTitle">Get the app and start with your first campaign.</h2>
-          <p data-i18n="contactText">
-            You receive the Windows build, a short PDF guide, and a workflow for safely sending individual emails through your own accounts.
-          </p>
+          <p class="eyebrow" data-i18n="contactEyebrow">SecureMailer Pro</p>
+          <h2 data-i18n="contactTitle">Начните с первой безопасной кампании.</h2>
+          <p data-i18n="contactText">Напишите в Telegram, чтобы обсудить покупку, установку и сценарий первой рассылки.</p>
         </div>
-        <div class="contact-actions">
-          <a class="contact-link" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="contactButton">Buy / discuss</a>
-          <a class="contact-link contact-link-secondary" href="https://t.me/pireaumonde1" data-contact="developer" data-i18n="developerButton">Contact developer</a>
+        <div class="contact-actions" data-reveal>
+          <a class="contact-link" href="https://t.me/teambaxyz" data-contact="buy" data-i18n="contactButton">Купить / обсудить</a>
+          <a class="contact-link contact-link-secondary" href="https://t.me/pireaumonde1" data-contact="developer" data-i18n="developerButton">Разработчик</a>
         </div>
       </section>
     </main>
