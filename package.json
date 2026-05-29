@@ -1,0 +1,23 @@
+{
+  "name": "securemailer_landing",
+  "version": "1.0.0",
+  "description": "Static landing page for SecureMailer Pro.",
+  "scripts": {
+    "qa:screens": "node tools/capture-screenshots.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incredibledude667-del/securemailer-pro-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/incredibledude667-del/securemailer-pro-landing/issues"
+  },
+  "homepage": "https://github.com/incredibledude667-del/securemailer-pro-landing#readme",
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

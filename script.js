@@ -35,6 +35,13 @@ const translations = {
     reportsTitle: "Понятно, кому ушло, а где ошибка.",
     reportsText:
       "После кампании остаются статусы получателей, причины ошибок, проверка возвратов через IMAP и отдельная чистая база для следующей отправки.",
+    reportMockTitle: "Отчет кампании",
+    reportMockSent: "отправлено",
+    reportMockErrors: "ошибок",
+    reportMockBounce: "возвратов",
+    reportMockStatusSent: "ушло",
+    reportMockStatusQueued: "в очереди",
+    reportMockStatusBounce: "bounce",
     priceEyebrow: "Одна цена",
     priceTitle: "Разовая покупка без подписки.",
     priceText:
@@ -85,6 +92,13 @@ const translations = {
     reportsTitle: "Know who received it and where it failed.",
     reportsText:
       "Each campaign leaves recipient statuses, error reasons, bounce checks through IMAP and a separate clean list for the next send.",
+    reportMockTitle: "Campaign report",
+    reportMockSent: "sent",
+    reportMockErrors: "errors",
+    reportMockBounce: "bounce",
+    reportMockStatusSent: "sent",
+    reportMockStatusQueued: "queued",
+    reportMockStatusBounce: "bounce",
     priceEyebrow: "One price",
     priceTitle: "One-time purchase. No subscription.",
     priceText:
@@ -106,6 +120,14 @@ const langButtons = document.querySelectorAll("[data-lang-select]");
 const priceNodes = document.querySelectorAll("[data-price]");
 const contactLinks = document.querySelectorAll("[data-contact]");
 let currentLang = localStorage.getItem("securemailer_lang") || "ru";
+
+if ("scrollRestoration" in window.history) {
+  window.history.scrollRestoration = "manual";
+}
+
+if (!window.location.hash) {
+  window.addEventListener("load", () => window.scrollTo({ top: 0, left: 0 }), { once: true });
+}
 
 function applyLanguage(lang) {
   currentLang = lang;
@@ -176,8 +198,3 @@ document.querySelectorAll("[data-reveal]").forEach((node, index) => {
 
 applyLanguage(currentLang);
 applyConfig();
-
-if ("scrollRestoration" in window.history && !window.location.hash) {
-  window.history.scrollRestoration = "manual";
-  window.scrollTo({ top: 0, left: 0 });
-}

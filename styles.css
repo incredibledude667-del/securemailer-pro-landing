@@ -1,5 +1,5 @@
 :root {
-  --bg: #f3f6fb;
+  --bg: #f4f7fb;
   --ink: #0a111d;
   --muted: #647084;
   --soft: #e9eef7;
@@ -8,8 +8,8 @@
   --blue-dark: #0759d6;
   --panel: rgba(255, 255, 255, 0.72);
   --white: #fff;
-  --shadow-soft: 0 24px 70px rgba(26, 49, 86, 0.12);
-  --shadow-blue: 0 34px 90px rgba(8, 125, 244, 0.26);
+  --shadow-soft: 0 20px 54px rgba(26, 49, 86, 0.1);
+  --shadow-blue: 0 28px 76px rgba(8, 125, 244, 0.2);
   --radius: 28px;
   color-scheme: light;
 }
@@ -27,8 +27,8 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   background:
-    radial-gradient(circle at 86% 8%, rgba(8, 125, 244, 0.18), transparent 36rem),
-    linear-gradient(180deg, #ffffff 0%, var(--bg) 52%, #eef3fb 100%);
+    radial-gradient(circle at 86% 10%, rgba(8, 125, 244, 0.14), transparent 34rem),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 54%, #eef3fb 100%);
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -67,19 +67,19 @@ a {
 .site-header {
   position: fixed;
   z-index: 30;
-  top: 18px;
+  top: 16px;
   left: 50%;
-  width: min(1180px, calc(100vw - 34px));
-  min-height: 64px;
+  width: min(1120px, calc(100vw - 40px));
+  min-height: 54px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 9px 10px 9px 12px;
+  padding: 7px 8px 7px 10px;
   border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.74);
-  box-shadow: 0 18px 55px rgba(18, 36, 67, 0.12);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 36px rgba(18, 36, 67, 0.09);
   backdrop-filter: blur(22px) saturate(1.2);
   transform: translateX(-50%);
 }
@@ -91,17 +91,17 @@ a {
 }
 
 .brand {
-  gap: 10px;
-  font-size: 18px;
+  gap: 9px;
+  font-size: 16px;
   font-weight: 760;
   letter-spacing: -0.04em;
   white-space: nowrap;
 }
 
 .brand img {
-  width: 38px;
-  height: 38px;
-  border-radius: 11px;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
   box-shadow: 0 8px 22px rgba(8, 125, 244, 0.22);
 }
 
@@ -111,19 +111,19 @@ a {
 }
 
 .nav {
-  gap: 4px;
+  gap: 1px;
 }
 
 .nav a,
 .lang-switch button {
-  min-height: 44px;
-  padding: 0 15px;
+  min-height: 34px;
+  padding: 0 11px;
   border: 0;
-  border-radius: 15px;
+  border-radius: 12px;
   background: transparent;
   color: #5e6878;
   font: inherit;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
   transition:
@@ -139,7 +139,10 @@ a {
 }
 
 .nav .nav-cta {
-  margin-left: 4px;
+  min-height: 38px;
+  margin-left: 8px;
+  padding: 0 17px;
+  border-radius: 13px;
   color: #fff;
   background: var(--ink);
   box-shadow: 0 12px 28px rgba(10, 17, 29, 0.18);
@@ -154,34 +157,35 @@ a {
 .lang-switch {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
-  margin-left: 6px;
-  padding: 3px;
+  gap: 1px;
+  margin-left: 4px;
+  padding: 2px;
   border: 1px solid rgba(16, 31, 53, 0.1);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.62);
+  border-radius: 13px;
+  background: rgba(245, 248, 253, 0.76);
 }
 
 .lang-switch button {
-  min-height: 38px;
-  padding: 0 12px;
-  border-radius: 12px;
+  min-height: 30px;
+  min-width: 36px;
+  padding: 0 9px;
+  border-radius: 10px;
 }
 
 .lang-switch button.is-active {
   color: #fff;
   background: var(--blue);
-  box-shadow: 0 10px 22px rgba(8, 125, 244, 0.22);
+  box-shadow: 0 8px 18px rgba(8, 125, 244, 0.2);
 }
 
 .hero {
   position: relative;
   min-height: 100svh;
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.7fr);
+  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 0.68fr);
   align-items: center;
   gap: clamp(36px, 6vw, 110px);
-  padding: 132px max(24px, 7vw) 78px;
+  padding: 120px max(24px, 7vw) 70px;
   isolation: isolate;
 }
 
@@ -219,16 +223,16 @@ p {
 h1 {
   max-width: 880px;
   margin: 0;
-  font-size: clamp(58px, 7.5vw, 122px);
-  line-height: 0.9;
-  letter-spacing: -0.075em;
+  font-size: clamp(56px, 7vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
 }
 
 html[lang="ru"] h1 {
-  max-width: 760px;
-  font-size: clamp(54px, 6.4vw, 96px);
-  line-height: 0.92;
-  letter-spacing: -0.066em;
+  max-width: 720px;
+  font-size: clamp(50px, 5.8vw, 86px);
+  line-height: 0.94;
+  letter-spacing: -0.058em;
 }
 
 h2 {
@@ -246,10 +250,10 @@ h3 {
 }
 
 .hero-text {
-  max-width: 690px;
-  margin: 26px 0 0;
+  max-width: 650px;
+  margin: 24px 0 0;
   color: var(--muted);
-  font-size: clamp(18px, 1.75vw, 23px);
+  font-size: clamp(18px, 1.55vw, 22px);
   line-height: 1.42;
   font-weight: 520;
 }
@@ -266,10 +270,10 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  padding: 0 24px;
-  border-radius: 16px;
-  font-size: 17px;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 15px;
+  font-size: 16px;
   font-weight: 750;
   letter-spacing: -0.03em;
   transition:
@@ -327,12 +331,12 @@ h3 {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 520px;
+  min-height: 480px;
 }
 
 .device-halo {
   position: absolute;
-  width: min(48vw, 610px);
+  width: min(44vw, 560px);
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(8, 125, 244, 0.24), rgba(8, 125, 244, 0.1) 42%, transparent 70%);
@@ -342,10 +346,10 @@ h3 {
 .hero-device img {
   position: relative;
   z-index: 2;
-  width: min(34vw, 445px);
-  min-width: 320px;
-  transform: rotate(-7deg);
-  filter: drop-shadow(0 42px 70px rgba(5, 79, 183, 0.28));
+  width: min(31vw, 410px);
+  min-width: 300px;
+  transform: rotate(-5deg);
+  filter: drop-shadow(0 38px 64px rgba(5, 79, 183, 0.25));
   animation: floatLogo 7s ease-in-out infinite;
 }
 
@@ -378,7 +382,7 @@ h3 {
 }
 
 .section {
-  padding: 112px max(24px, 7vw);
+  padding: 104px max(24px, 7vw);
 }
 
 .privacy,
@@ -450,8 +454,8 @@ h3 {
 
 .flow article {
   position: relative;
-  min-height: 260px;
-  padding: 26px;
+  min-height: 244px;
+  padding: 24px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.78);
   border-radius: var(--radius);
@@ -491,20 +495,20 @@ h3 {
 }
 
 .reports {
-  padding-top: 70px;
+  padding-top: 74px;
 }
 
 .report-board {
   position: relative;
   display: grid;
-  gap: 18px;
-  min-height: 410px;
-  padding: 28px;
+  gap: 16px;
+  min-height: 390px;
+  padding: 26px;
   border: 1px solid rgba(255, 255, 255, 0.82);
-  border-radius: 34px;
+  border-radius: 30px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.68)),
-    radial-gradient(circle at 82% 12%, rgba(8, 125, 244, 0.18), transparent 20rem);
+    radial-gradient(circle at 84% 10%, rgba(8, 125, 244, 0.12), transparent 18rem);
   box-shadow: var(--shadow-soft);
   backdrop-filter: blur(18px);
 }
@@ -512,42 +516,59 @@ h3 {
 .report-board-head {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 13px;
   color: var(--muted);
   font-weight: 760;
 }
 
-.report-board-head span {
-  width: 12px;
-  height: 12px;
+.report-dots {
+  display: inline-flex;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.report-dots span {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #22c55e;
-  box-shadow:
-    22px 0 0 #ef4444,
-    44px 0 0 #f59e0b;
+}
+
+.report-dots span:nth-child(2) {
+  background: #ef4444;
+}
+
+.report-dots span:nth-child(3) {
+  background: #f59e0b;
+}
+
+.report-board-head strong {
+  min-width: 0;
+  font-size: 18px;
+  letter-spacing: -0.035em;
 }
 
 .report-metrics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 
 .report-metrics div,
 .report-rows div {
-  border: 1px solid rgba(20, 31, 48, 0.08);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(20, 31, 48, 0.075);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .report-metrics div {
-  padding: 18px;
+  padding: 16px;
 }
 
 .report-metrics b {
   display: block;
   color: var(--ink);
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1;
   letter-spacing: -0.06em;
 }
@@ -562,7 +583,7 @@ h3 {
 
 .report-rows {
   display: grid;
-  gap: 10px;
+  gap: 9px;
   align-content: end;
 }
 
@@ -571,8 +592,8 @@ h3 {
   grid-template-columns: 12px 1fr auto;
   gap: 12px;
   align-items: center;
-  min-height: 58px;
-  padding: 0 16px;
+  min-height: 54px;
+  padding: 0 15px;
 }
 
 .report-rows span {
@@ -592,7 +613,7 @@ h3 {
 
 .report-rows strong {
   overflow: hidden;
-  font-size: 15px;
+  font-size: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -648,8 +669,8 @@ h3 {
   gap: 34px;
   align-items: end;
   margin: 10px max(24px, 7vw) 92px;
-  padding: 56px;
-  border-radius: 38px;
+  padding: 52px;
+  border-radius: 34px;
   color: #fff;
   background:
     radial-gradient(circle at 82% 20%, rgba(110, 214, 255, 0.35), transparent 24rem),
